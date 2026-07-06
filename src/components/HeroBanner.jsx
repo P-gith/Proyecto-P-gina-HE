@@ -7,7 +7,13 @@ export default function HeroBanner({ game, onDownload }) {
 
   return (
     <section id="inicio" className="relative overflow-hidden">
-      <div className={`absolute inset-0 bg-gradient-to-r ${game.imageColor} opacity-20`} />
+      <img
+        src={game.image}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-30"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">

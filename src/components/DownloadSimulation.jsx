@@ -65,8 +65,12 @@ export default function DownloadSimulation({ game, onClose }) {
         animate={{ opacity: 1, scale: 1 }}
         className="mb-6"
       >
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 text-3xl font-black text-white/30">
-          {game.name.charAt(0)}
+        <div className="mx-auto mb-4 h-20 w-20 overflow-hidden rounded-2xl border border-gray-700 shadow-lg">
+          <img
+            src={game.image}
+            alt={game.name}
+            className="h-full w-full object-cover"
+          />
         </div>
         <h3 className="text-lg font-bold text-white">{game.name}</h3>
         <p className="text-sm text-gray-400">{game.size} - {game.platform}</p>
