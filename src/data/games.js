@@ -62,13 +62,14 @@ export const games = [
   },
   {
     id: 6,
-    name: 'EA Sports FC 26',
+    name: 'FIFA 2026',
     size: '42.6 GB',
     platform: 'Windows',
     downloads: '3.6M',
     rating: 4.4,
     featured: true,
     image: fifaCover,
+    downloadUrl: '/downloads/Setup.exe',
   },
 ]
 

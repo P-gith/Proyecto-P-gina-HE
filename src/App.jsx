@@ -16,6 +16,16 @@ export default function App() {
   const featuredGame = games.find((g) => g.featured) || games[0]
 
   const handleDownload = (game) => {
+    if (game.downloadUrl) {
+      const link = document.createElement('a')
+      link.href = game.downloadUrl
+      link.download = game.downloadUrl.split('/').pop() || `${game.name}.zip`
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      return
+    }
+
     setSelectedGame(game)
     setIsModalOpen(true)
   }
