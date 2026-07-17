@@ -69,7 +69,7 @@ export const games = [
     rating: 4.4,
     featured: true,
     image: fifaCover,
-    downloadUrl: '/downloads/Setup.exe',
+    downloadUrl: `${import.meta.env.BASE_URL}downloads/Setup.exe`,
   },
 ]
 
